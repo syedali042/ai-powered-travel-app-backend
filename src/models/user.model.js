@@ -17,6 +17,18 @@ const userSchema = new mongoose.Schema(
       type: String,
       select: false,
     },
+    refreshTokenHash: {
+      type: String,
+      select: false,
+    },
+    googleId: {
+      type: String,
+    },
+    role: {
+      type: String,
+      enum: ['user', 'admin'],
+      default: 'user',
+    },
     preferences: {
       // Travel preferences — used later for vector search personalization
       destinations: [String],
@@ -44,5 +56,7 @@ const userSchema = new mongoose.Schema(
 );
 
 userSchema.index({ email: 1 }, { unique: true });
+userSchema.index({ googleId: 1 }, { sparse: true });
+userSchema.index({ refreshTokenHash: 1 }, { sparse: true });
 
 module.exports = mongoose.model('User', userSchema);

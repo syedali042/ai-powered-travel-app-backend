@@ -1,5 +1,6 @@
 const userService = require('../services/user.service');
 const { success, paginated } = require('../utils/response');
+const authService = require('../services/authService');
 
 async function getUsers(req, res, next) {
   try {
@@ -48,4 +49,22 @@ async function deleteUser(req, res, next) {
   }
 }
 
-module.exports = { getUsers, getUser, createUser, updateUser, deleteUser };
+async function getMe(req, res, next) {
+  try {
+    const user = await userService.getUserById(req.user._id);
+    return success(res, authService.sanitizeUser(user));
+  } catch (err) {
+    next(err);
+  }
+}
+
+async function updateMyPreferences(req, res, next) {
+  try {
+    const user = await userService.updateMyPreferences(req.user._id, req.body);
+    return success(res, authService.sanitizeUser(user));
+  } catch (err) {
+    next(err);
+  }
+}
+
+module.exports = { getUsers, getUser, createUser, updateUser, deleteUser, getMe, updateMyPreferences };

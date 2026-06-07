@@ -70,6 +70,26 @@ async function generateAndStoreProfileEmbedding(userId) {
   return embedding;
 }
 
+async function updateMyPreferences(userId, preferences) {
+  const update = {};
+  if (preferences.travelStyle  !== undefined) update['preferences.travelStyle']  = preferences.travelStyle;
+  if (preferences.destinations !== undefined) update['preferences.destinations'] = preferences.destinations;
+  if (preferences.currencies   !== undefined) update['preferences.currencies']   = preferences.currencies;
+
+  const user = await User.findByIdAndUpdate(
+    userId,
+    { $set: update },
+    { new: true, runValidators: true }
+  ).lean();
+  if (!user) throw new NotFoundError('User');
+
+  generateAndStoreProfileEmbedding(userId).catch((err) =>
+    logger.warn(`Profile embedding update failed for user ${userId}: ${err.message}`)
+  );
+
+  return user;
+}
+
 async function deleteUser(id) {
   // Soft delete
   const user = await User.findByIdAndUpdate(id, { isActive: false }, { new: true }).lean();
@@ -77,4 +97,4 @@ async function deleteUser(id) {
   return user;
 }
 
-module.exports = { getAllUsers, getUserById, createUser, updateUser, deleteUser, generateAndStoreProfileEmbedding };
+module.exports = { getAllUsers, getUserById, createUser, updateUser, updateMyPreferences, deleteUser, generateAndStoreProfileEmbedding };
