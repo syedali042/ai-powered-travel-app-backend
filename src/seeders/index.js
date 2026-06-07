@@ -1,11 +1,10 @@
-const { User, Destination, Activity, Hotel, Restaurant, Trip, ChatSession } = require('../models');
+const { User, Destination, Activity, Hotel, Trip, ChatSession } = require('../models');
 const logger = require('../utils/logger');
 
 const users = require('./data/users');
 const destinations = require('./data/destinations');
 const activities = require('./data/activities');
 const hotels = require('./data/hotels');
-const restaurants = require('./data/restaurants');
 const trips = require('./data/trips');
 const chatSessions = require('./data/chatSessions');
 
@@ -28,7 +27,6 @@ async function clearAll() {
     Destination.deleteMany({}),
     Activity.deleteMany({}),
     Hotel.deleteMany({}),
-    Restaurant.deleteMany({}),
     Trip.deleteMany({}),
     ChatSession.deleteMany({}),
   ]);
@@ -44,10 +42,9 @@ async function runSeed({ fresh = false } = {}) {
     fresh ? Destination.insertMany(destinations).then((r) => r.length) : upsertMany(Destination, destinations),
   ]);
 
-  const [uActivities, uHotels, uRestaurants] = await Promise.all([
+  const [uActivities, uHotels] = await Promise.all([
     fresh ? Activity.insertMany(activities).then((r) => r.length) : upsertMany(Activity, activities),
     fresh ? Hotel.insertMany(hotels).then((r) => r.length) : upsertMany(Hotel, hotels),
-    fresh ? Restaurant.insertMany(restaurants).then((r) => r.length) : upsertMany(Restaurant, restaurants),
   ]);
 
   const [uTrips, uChatSessions] = await Promise.all([
@@ -60,7 +57,6 @@ async function runSeed({ fresh = false } = {}) {
     destinations: uDestinations,
     activities: uActivities,
     hotels: uHotels,
-    restaurants: uRestaurants,
     trips: uTrips,
     chatSessions: uChatSessions,
   };

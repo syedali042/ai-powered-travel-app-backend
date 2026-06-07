@@ -104,33 +104,6 @@ const HOTEL_IDS = {
   prinsenhof_gron:    oid('65d000000000000000000019'),
 };
 
-const RESTAURANT_IDS = {
-  rijks_restaurant:    oid('65e000000000000000000001'),
-  cafe_de_jaren:       oid('65e000000000000000000002'),
-  moeders:             oid('65e000000000000000000003'),
-  envy_amsterdam:      oid('65e000000000000000000004'),
-  tempo_doeloe:        oid('65e000000000000000000005'),
-  restaurant_bak:      oid('65e000000000000000000006'),
-  foodhallen:          oid('65e000000000000000000007'),
-  blue_amsterdam:      oid('65e000000000000000000008'),
-  plein24:             oid('65e000000000000000000009'),
-  graanstra_frites:    oid('65e00000000000000000000a'),
-  fenix_food:          oid('65e00000000000000000000b'),
-  fitzgerald_rdam:     oid('65e00000000000000000000c'),
-  fred_rotterdam:      oid('65e00000000000000000000d'),
-  smaak_rotterdam:     oid('65e00000000000000000000e'),
-  bazar_rotterdam:     oid('65e00000000000000000000f'),
-  loetje_rotterdam:    oid('65e000000000000000000010'),
-  garoeda_hague:       oid('65e000000000000000000011'),
-  callas_hague:        oid('65e000000000000000000012'),
-  de_basiliek:         oid('65e000000000000000000013'),
-  lucas_utrecht:       oid('65e000000000000000000014'),
-  oud_utrecht:         oid('65e000000000000000000015'),
-  toine_hermsen:       oid('65e000000000000000000016'),
-  dingel_maastricht:   oid('65e000000000000000000017'),
-  jopenkerk_haarlem:   oid('65e000000000000000000018'),
-  humphreys_groningen: oid('65e000000000000000000019'),
-};
 
 const TRIP_IDS = {
   amsterdam_weekend_james:  oid('65f000000000000000000001'),
@@ -155,4 +128,4 @@ const TRIP_IDS = {
   ams_completed_alice:      oid('65f000000000000000000014'),
 };
 
-module.exports = { DEST_IDS, USER_IDS, ACTIVITY_IDS, HOTEL_IDS, RESTAURANT_IDS, TRIP_IDS };
+module.exports = { DEST_IDS, USER_IDS, ACTIVITY_IDS, HOTEL_IDS, TRIP_IDS };

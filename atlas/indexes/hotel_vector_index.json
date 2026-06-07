@@ -1,0 +1,30 @@
+{
+  "name": "hotel_vector_index",
+  "type": "vectorSearch",
+  "definition": {
+    "fields": [
+      {
+        "type": "vector",
+        "path": "embedding",
+        "numDimensions": 1024,
+        "similarity": "cosine"
+      },
+      {
+        "type": "filter",
+        "path": "destinationId"
+      },
+      {
+        "type": "filter",
+        "path": "starRating"
+      },
+      {
+        "type": "filter",
+        "path": "priceLevel"
+      },
+      {
+        "type": "filter",
+        "path": "isActive"
+      }
+    ]
+  }
+}

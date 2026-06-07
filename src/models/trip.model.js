@@ -4,8 +4,8 @@ const { Schema } = mongoose;
 
 const itineraryItemSchema = new Schema(
   {
-    type: { type: String, enum: ['activity', 'hotel', 'restaurant', 'transport'], required: true },
-    refId: { type: Schema.Types.ObjectId }, // ref to Activity / Hotel / Restaurant
+    type: { type: String, enum: ['activity', 'hotel', 'transport'], required: true },
+    refId: { type: Schema.Types.ObjectId }, // ref to Activity / Hotel
     time: String, // e.g. '09:00'
     duration: Number, // hours
     notes: String,

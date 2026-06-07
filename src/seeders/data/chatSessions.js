@@ -1,4 +1,4 @@
-const { USER_IDS, DEST_IDS, ACTIVITY_IDS, HOTEL_IDS, RESTAURANT_IDS, TRIP_IDS } = require('../ids');
+const { USER_IDS, DEST_IDS, ACTIVITY_IDS, HOTEL_IDS, TRIP_IDS } = require('../ids');
 
 module.exports = [
   {
@@ -76,7 +76,7 @@ module.exports = [
       lastVectorSearchResults: [
         { entityType: 'activities', refId: ACTIVITY_IDS.nemo_science, score: 0.95, snippet: 'NEMO Science Museum — 5 floors of family hands-on science' },
         { entityType: 'activities', refId: ACTIVITY_IDS.madurodam, score: 0.93, snippet: 'Madurodam — 1:25 scale Netherlands miniature city, The Hague' },
-        { entityType: 'restaurants', refId: RESTAURANT_IDS.foodhallen, score: 0.84, snippet: 'Foodhallen Amsterdam — diverse food stalls including halal options' },
+        { entityType: 'activities', refId: ACTIVITY_IDS.giethoorn_boat, score: 0.84, snippet: 'Giethoorn whisper boat — family-friendly, life jackets provided' },
       ],
       preferencesSnapshot: { destinations: ['Amsterdam', 'The Hague', 'Giethoorn'], travelStyle: 'family', budget: 'mid' },
     },
@@ -174,8 +174,7 @@ module.exports = [
     context: {
       lastVectorSearchResults: [
         { entityType: 'destinations', refId: DEST_IDS.maastricht, score: 0.97, snippet: 'Maastricht — Burgundian culinary capital of the Netherlands' },
-        { entityType: 'restaurants', refId: RESTAURANT_IDS.toine_hermsen, score: 0.96, snippet: 'Toine Hermsen — 2 Michelin stars, Burgundian fine dining' },
-        { entityType: 'restaurants', refId: RESTAURANT_IDS.dingel_maastricht, score: 0.89, snippet: 'Grand Café d\'n Ingel — vlaai, zuurvlees, Vrijthof terrace' },
+        { entityType: 'activities', refId: ACTIVITY_IDS.maastricht_caves, score: 0.89, snippet: 'Maastricht Caves — underground limestone labyrinth' },
       ],
       preferencesSnapshot: { destinations: ['Maastricht', 'Amsterdam', 'Rotterdam'], travelStyle: 'cultural', budget: 'luxury' },
     },
@@ -212,7 +211,7 @@ module.exports = [
     context: {
       lastVectorSearchResults: [
         { entityType: 'activities', refId: ACTIVITY_IDS.rijksmuseum, score: 0.90, snippet: 'Rijksmuseum — 3 hours, book morning slot' },
-        { entityType: 'restaurants', refId: RESTAURANT_IDS.rijks_restaurant, score: 0.92, snippet: 'Restaurant Rijks — business dinner inside Rijksmuseum' },
+        { entityType: 'activities', refId: ACTIVITY_IDS.canal_boat_tour, score: 0.82, snippet: 'Canal boat tour — 1.5h, classic Amsterdam afternoon' },
       ],
       preferencesSnapshot: { destinations: ['Amsterdam', 'Rotterdam', 'The Hague'], travelStyle: 'cultural', budget: 'mid' },
     },
@@ -268,9 +267,8 @@ module.exports = [
     ],
     context: {
       lastVectorSearchResults: [
-        { entityType: 'restaurants', refId: RESTAURANT_IDS.tempo_doeloe, score: 0.97, snippet: 'Tempo Doeloe — Amsterdam\'s finest rijsttafel, book 3-4 weeks ahead' },
-        { entityType: 'restaurants', refId: RESTAURANT_IDS.garoeda_hague, score: 0.95, snippet: 'Garoeda The Hague — oldest Indonesian rijsttafel restaurant, 1949' },
-        { entityType: 'activities', refId: ACTIVITY_IDS.albert_cuyp_market, score: 0.90, snippet: 'Albert Cuyp Market — stroopwafels, haring, Dutch street food' },
+        { entityType: 'activities', refId: ACTIVITY_IDS.albert_cuyp_market, score: 0.97, snippet: 'Albert Cuyp Market — stroopwafels, haring, Dutch street food' },
+        { entityType: 'destinations', refId: DEST_IDS.the_hague, score: 0.88, snippet: 'The Hague — largest Indonesian community in Europe' },
       ],
       preferencesSnapshot: { destinations: ['Amsterdam', 'Rotterdam', 'Eindhoven'], travelStyle: 'budget', budget: 'mid' },
     },
@@ -288,7 +286,7 @@ module.exports = [
       lastVectorSearchResults: [
         { entityType: 'hotels', refId: HOTEL_IDS.the_dylan, score: 0.96, snippet: 'The Dylan Amsterdam — 5-star boutique, Michelin-starred Vinkeles' },
         { entityType: 'hotels', refId: HOTEL_IDS.kruisherenhotel, score: 0.93, snippet: 'Kruisherenhotel Maastricht — Gothic monastery 5-star hotel' },
-        { entityType: 'restaurants', refId: RESTAURANT_IDS.rijks_restaurant, score: 0.91, snippet: 'Restaurant Rijks — acclaimed Dutch cuisine, Rijksmuseum setting' },
+        { entityType: 'activities', refId: ACTIVITY_IDS.canal_boat_tour, score: 0.88, snippet: 'Private canal boat charter — from €300/hour with chef option' },
       ],
       preferencesSnapshot: { destinations: ['Amsterdam', 'Rotterdam', 'Maastricht'], travelStyle: 'luxury', budget: 'luxury' },
     },

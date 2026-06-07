@@ -26,7 +26,7 @@ const chatSessionSchema = new Schema(
     context: {
       lastVectorSearchResults: [
         {
-          entityType: String, // 'destinations' | 'activities' | 'hotels' | 'restaurants'
+          entityType: String, // 'destinations' | 'activities' | 'hotels'
           refId: Schema.Types.ObjectId,
           score: Number,
           snippet: String,

@@ -1,4 +1,4 @@
-const { DEST_IDS, USER_IDS, ACTIVITY_IDS, HOTEL_IDS, RESTAURANT_IDS, TRIP_IDS } = require('../ids');
+const { DEST_IDS, USER_IDS, ACTIVITY_IDS, HOTEL_IDS, TRIP_IDS } = require('../ids');
 
 const DRAFT_TTL = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
 
@@ -19,16 +19,13 @@ module.exports = [
         items: [
           { type: 'hotel', refId: HOTEL_IDS.hotel_v, time: '15:00', notes: 'Check in' },
           { type: 'activity', refId: ACTIVITY_IDS.canal_boat_tour, time: '17:00', duration: 1.5, notes: 'Evening canal cruise' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.cafe_de_jaren, time: '19:30', duration: 2 },
         ],
       },
       {
         dayNumber: 2, date: new Date('2026-07-11'),
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.rijksmuseum, time: '09:30', duration: 3 },
-          { type: 'restaurant', refId: RESTAURANT_IDS.graanstra_frites, time: '13:00', duration: 0.5, notes: 'Lunch — try the oorlog' },
           { type: 'activity', refId: ACTIVITY_IDS.van_gogh_museum, time: '14:30', duration: 2.5 },
-          { type: 'restaurant', refId: RESTAURANT_IDS.tempo_doeloe, time: '19:00', duration: 2.5, notes: 'Book weeks ahead' },
         ],
       },
       {
@@ -36,7 +33,6 @@ module.exports = [
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.anne_frank_house, time: '09:00', duration: 1.5, notes: 'Pre-book tickets' },
           { type: 'activity', refId: ACTIVITY_IDS.vondelpark_cycling, time: '11:30', duration: 2 },
-          { type: 'restaurant', refId: RESTAURANT_IDS.foodhallen, time: '18:00', duration: 2 },
         ],
       },
       {
@@ -79,7 +75,6 @@ module.exports = [
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.rijksmuseum, time: '09:30', duration: 3 },
           { type: 'activity', refId: ACTIVITY_IDS.stedelijk_museum, time: '14:00', duration: 2.5 },
-          { type: 'restaurant', refId: RESTAURANT_IDS.rijks_restaurant, time: '18:30', notes: 'Special dinner' },
         ],
       },
       {
@@ -87,7 +82,6 @@ module.exports = [
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.anne_frank_house, time: '09:00', duration: 1.5 },
           { type: 'activity', refId: ACTIVITY_IDS.rembrandt_house, time: '11:30', duration: 2 },
-          { type: 'restaurant', refId: RESTAURANT_IDS.moeders, time: '19:00', notes: 'Try stamppot' },
         ],
       },
       {
@@ -96,7 +90,6 @@ module.exports = [
           { type: 'transport', time: '10:00', notes: 'Intercity train to Rotterdam (~40 min)' },
           { type: 'hotel', refId: HOTEL_IDS.hotel_new_york, time: '14:00', notes: 'Check in — 2 nights' },
           { type: 'activity', refId: ACTIVITY_IDS.cube_houses, time: '16:00', duration: 1 },
-          { type: 'restaurant', refId: RESTAURANT_IDS.fenix_food, time: '18:00' },
         ],
       },
       {
@@ -105,7 +98,6 @@ module.exports = [
           { type: 'activity', refId: ACTIVITY_IDS.markthal_tour, time: '10:00', duration: 2 },
           { type: 'activity', refId: ACTIVITY_IDS.erasmus_bridge, time: '12:30', duration: 1 },
           { type: 'activity', refId: ACTIVITY_IDS.rotterdam_harbour, time: '14:30', duration: 1.5 },
-          { type: 'restaurant', refId: RESTAURANT_IDS.fitzgerald_rdam, time: '19:00' },
         ],
       },
       {
@@ -113,14 +105,12 @@ module.exports = [
         items: [
           { type: 'transport', time: '10:00', notes: 'Train to Maastricht (~2h30m)' },
           { type: 'hotel', refId: HOTEL_IDS.kruisherenhotel, time: '15:00', notes: 'Check in — 2 nights' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.dingel_maastricht, time: '19:30' },
         ],
       },
       {
         dayNumber: 7, date: new Date('2026-08-21'),
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.maastricht_caves, time: '10:30', duration: 1.5 },
-          { type: 'restaurant', refId: RESTAURANT_IDS.toine_hermsen, time: '19:00', notes: 'Special occasion — book 6 weeks ahead' },
         ],
       },
     ],
@@ -146,7 +136,6 @@ module.exports = [
           { type: 'hotel', refId: HOTEL_IDS.citizenm_rdam, time: '14:00', notes: 'Check in — 2 nights' },
           { type: 'activity', refId: ACTIVITY_IDS.cube_houses, time: '15:30', duration: 1 },
           { type: 'activity', refId: ACTIVITY_IDS.markthal_tour, time: '17:00', duration: 2 },
-          { type: 'restaurant', refId: RESTAURANT_IDS.bazar_rotterdam, time: '19:30' },
         ],
       },
       {
@@ -155,7 +144,6 @@ module.exports = [
           { type: 'activity', refId: ACTIVITY_IDS.erasmus_bridge, time: '09:00', duration: 1, notes: 'Golden hour walk' },
           { type: 'activity', refId: ACTIVITY_IDS.rotterdam_harbour, time: '11:00', duration: 1.5 },
           { type: 'activity', refId: ACTIVITY_IDS.maritime_museum_rdam, time: '14:00', duration: 2 },
-          { type: 'restaurant', refId: RESTAURANT_IDS.fred_rotterdam, time: '19:30' },
         ],
       },
     ],
@@ -179,7 +167,6 @@ module.exports = [
         dayNumber: 1, date: new Date('2026-04-18'),
         items: [
           { type: 'hotel', refId: HOTEL_IDS.pulitzer, time: '14:00', notes: 'Canal-view room requested' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.envy_amsterdam, time: '19:30' },
         ],
       },
       {
@@ -188,7 +175,6 @@ module.exports = [
           { type: 'transport', time: '08:30', notes: 'Coach to Keukenhof (~1h from Amsterdam)' },
           { type: 'activity', refId: ACTIVITY_IDS.keukenhof_gardens, time: '09:30', duration: 4, notes: 'Full morning — arrive early to beat crowds' },
           { type: 'transport', time: '14:00', notes: 'Cycle through the Bollenstreek bulb fields back toward Lisse station' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.rijks_restaurant, time: '19:00' },
         ],
       },
       {
@@ -196,7 +182,6 @@ module.exports = [
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.anne_frank_house, time: '10:00', duration: 1.5 },
           { type: 'activity', refId: ACTIVITY_IDS.vondelpark_cycling, time: '12:00', duration: 2 },
-          { type: 'restaurant', refId: RESTAURANT_IDS.restaurant_bak, time: '19:30' },
         ],
       },
     ],
@@ -220,20 +205,17 @@ module.exports = [
         dayNumber: 1, date: new Date('2026-09-12'),
         items: [
           { type: 'hotel', refId: HOTEL_IDS.kruisherenhotel, time: '14:00' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.dingel_maastricht, time: '18:30', notes: 'Arrival drinks on Vrijthof' },
         ],
       },
       {
         dayNumber: 2, date: new Date('2026-09-13'),
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.maastricht_caves, time: '10:00' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.toine_hermsen, time: '19:30', notes: 'Highlight — book 6 weeks in advance' },
         ],
       },
       {
         dayNumber: 3, date: new Date('2026-09-14'),
         items: [
-          { type: 'restaurant', refId: RESTAURANT_IDS.dingel_maastricht, time: '10:30', notes: 'Coffee and vlaai on the Vrijthof' },
           { type: 'transport', time: '13:00', notes: 'Walk to Limburg wine region (short taxi)' },
         ],
       },
@@ -288,7 +270,6 @@ module.exports = [
         dayNumber: 2, date: new Date('2026-07-26'),
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.nemo_science, time: '10:00', duration: 3, notes: 'Best family activity in Amsterdam' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.foodhallen, time: '18:00', notes: 'Kids can choose from multiple stalls' },
         ],
       },
       {
@@ -370,7 +351,6 @@ module.exports = [
         dayNumber: 1, date: new Date('2026-10-05'),
         items: [
           { type: 'hotel', refId: HOTEL_IDS.the_dylan, time: '14:00', notes: 'Canal suite — Keizersgracht view' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.rijks_restaurant, time: '19:30', notes: 'Opening night dinner' },
         ],
       },
       {
@@ -378,7 +358,6 @@ module.exports = [
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.rijksmuseum, time: '09:30', duration: 3, notes: 'Private guided tour booked' },
           { type: 'activity', refId: ACTIVITY_IDS.van_gogh_museum, time: '14:00', duration: 2.5 },
-          { type: 'restaurant', refId: RESTAURANT_IDS.envy_amsterdam, time: '20:00' },
         ],
       },
       {
@@ -386,7 +365,6 @@ module.exports = [
         items: [
           { type: 'transport', time: '10:00', notes: 'First-class Thalys to Maastricht (~2h30m)' },
           { type: 'hotel', refId: HOTEL_IDS.kruisherenhotel, time: '14:00', notes: 'Chapel suite' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.toine_hermsen, time: '19:30' },
         ],
       },
     ],
@@ -422,7 +400,6 @@ module.exports = [
         dayNumber: 2, date: new Date('2026-06-02'),
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.albert_cuyp_market, time: '10:00', notes: 'Free and delicious street snacks' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.graanstra_frites, time: '13:00', notes: 'Best €3 lunch in Amsterdam' },
           { type: 'activity', refId: ACTIVITY_IDS.canal_boat_tour, time: '17:00' },
         ],
       },
@@ -460,7 +437,6 @@ module.exports = [
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.rembrandt_house, time: '10:00' },
           { type: 'activity', refId: ACTIVITY_IDS.stedelijk_museum, time: '13:30' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.cafe_de_jaren, time: '18:30' },
         ],
       },
       {
@@ -497,7 +473,6 @@ module.exports = [
         items: [
           { type: 'hotel', refId: HOTEL_IDS.citizenm_ams, time: '14:00' },
           { type: 'activity', refId: ACTIVITY_IDS.van_gogh_museum, time: '16:00' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.cafe_de_jaren, time: '19:00' },
         ],
       },
       {
@@ -505,7 +480,6 @@ module.exports = [
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.rijksmuseum, time: '09:30' },
           { type: 'activity', refId: ACTIVITY_IDS.anne_frank_house, time: '14:00' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.moeders, time: '19:00' },
         ],
       },
       {
@@ -513,7 +487,6 @@ module.exports = [
         items: [
           { type: 'transport', time: '10:30', notes: 'Train to Haarlem (20 min)' },
           { type: 'hotel', refId: HOTEL_IDS.amadeus_haarlem, time: '13:00', notes: 'Grote Markt view room' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.jopenkerk_haarlem, time: '19:00' },
         ],
       },
     ],
@@ -540,14 +513,12 @@ module.exports = [
         dayNumber: 3, date: new Date('2026-08-05'),
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.rijksmuseum, time: '10:00', notes: 'Weekend leisure' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.rijks_restaurant, time: '13:00', notes: 'Business lunch with client' },
         ],
       },
       {
         dayNumber: 4, date: new Date('2026-08-06'),
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.canal_boat_tour, time: '14:00' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.plein24, time: '19:30' },
         ],
       },
     ],
@@ -573,7 +544,6 @@ module.exports = [
         items: [
           { type: 'hotel', refId: HOTEL_IDS.pulitzer, time: '14:00', notes: 'Canal-view room, honeymoon package' },
           { type: 'activity', refId: ACTIVITY_IDS.canal_boat_tour, time: '16:30', notes: 'Private evening canal cruise' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.rijks_restaurant, time: '20:00' },
         ],
       },
       {
@@ -608,28 +578,18 @@ module.exports = [
         dayNumber: 1, date: new Date('2026-07-17'),
         items: [
           { type: 'hotel', refId: HOTEL_IDS.hotel_v, time: '13:00' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.foodhallen, time: '18:00', notes: 'Orientation — try 5 different stalls' },
         ],
       },
       {
         dayNumber: 2, date: new Date('2026-07-18'),
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.albert_cuyp_market, time: '09:30', notes: 'Haring, stroopwafels, kaas' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.tempo_doeloe, time: '19:30', notes: 'Rijsttafel feast' },
         ],
       },
       {
         dayNumber: 3, date: new Date('2026-07-19'),
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.markthal_tour, time: '10:00', notes: 'Rotterdam Markthal' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.fenix_food, time: '12:00' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.bazar_rotterdam, time: '19:30', notes: 'Lebanese-Moroccan dinner' },
-        ],
-      },
-      {
-        dayNumber: 5, date: new Date('2026-07-21'),
-        items: [
-          { type: 'restaurant', refId: RESTAURANT_IDS.garoeda_hague, time: '19:00', notes: 'Oldest rijsttafel restaurant in NL' },
         ],
       },
     ],
@@ -710,7 +670,6 @@ module.exports = [
         dayNumber: 3, date: new Date('2026-08-10'),
         items: [
           { type: 'hotel', refId: HOTEL_IDS.prinsenhof_gron, time: '14:00' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.humphreys_groningen, time: '19:30' },
         ],
       },
     ],
@@ -741,7 +700,6 @@ module.exports = [
         items: [
           { type: 'hotel', refId: HOTEL_IDS.nhow_rotterdam, time: '13:00' },
           { type: 'activity', refId: ACTIVITY_IDS.markthal_tour, time: '15:00' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.smaak_rotterdam, time: '19:00' },
         ],
       },
     ],
@@ -762,17 +720,10 @@ module.exports = [
     ],
     itinerary: [
       {
-        dayNumber: 1, date: new Date('2026-05-16'),
-        items: [
-          { type: 'restaurant', refId: RESTAURANT_IDS.moeders, time: '19:00', notes: 'Alice\'s favourite' },
-        ],
-      },
-      {
         dayNumber: 2, date: new Date('2026-05-17'),
         items: [
           { type: 'activity', refId: ACTIVITY_IDS.albert_cuyp_market, time: '10:00' },
           { type: 'activity', refId: ACTIVITY_IDS.heineken_experience, time: '14:00' },
-          { type: 'restaurant', refId: RESTAURANT_IDS.restaurant_bak, time: '19:30' },
         ],
       },
     ],
